@@ -23,6 +23,7 @@ template.forEach(file => {
   mkdirp.sync(path.dirname(path.resolve(buildPath, file)))
 
   switch (ext) {
+    case '.scss':
     case '.sass': {
       const url = `${file.substr(0, file.length - ext.length)}.css`
       const out = path.resolve(buildPath, url)
@@ -55,7 +56,7 @@ content.forEach(file => {
       const data = fs.readFileSync(path.resolve(contentPath, file), 'utf-8')
       const { html, parsedYaml } = markdown.parse(data)
       const template = templates[parsedYaml.layout || 'index']
-      const rendered = template ? template.render({ html, ...parsedYaml, static: _static })  : html
+      const rendered = template ? template.render({ html, ...parsedYaml, static: _static }) : html
       fs.writeFileSync(out, rendered)
       break
     }
