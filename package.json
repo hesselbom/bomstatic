@@ -2,6 +2,11 @@
   "name": "bomstatic",
   "version": "0.1.0",
   "main": "index.js",
+  "description": "Just another static site generator",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hesselbom/bomstatic.git"
+  },
   "author": "Viktor Hesselbom <viktor@hesselbom.net>",
   "license": "MIT",
   "dependencies": {
