@@ -1,0 +1,17 @@
+{
+  "name": "bomstatic",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Viktor Hesselbom <viktor@hesselbom.net>",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "jekyll-markdown-parser": "^1.1.1",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.7.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "bin": {
+    "bomstatic": "./index.js"
+  }
+}
