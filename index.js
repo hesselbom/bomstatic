@@ -12,8 +12,8 @@ const pug = require('pug')
 const contentPath = path.resolve(cwd, 'content')
 const templatePath = path.resolve(cwd, 'template')
 const buildPath = path.resolve(cwd, 'build')
-const content = glob.sync('**/[^_]*', { cwd: contentPath })
-const template = glob.sync('**/[^_]*', { cwd: templatePath })
+const content = glob.sync('**/[^_]*', { cwd: contentPath, nodir: true })
+const template = glob.sync('**/[^_]*', { cwd: templatePath, nodir: true })
 
 let templates = {}
 let _static = { styles: [] }
