@@ -56,7 +56,7 @@ content.forEach(file => {
       const data = fs.readFileSync(path.resolve(contentPath, file), 'utf-8')
       const { html, parsedYaml } = markdown.parse(data)
       const template = templates[parsedYaml.layout || 'index']
-      const rendered = template ? template.render({ html, ...parsedYaml, static: _static }) : html
+      const rendered = template ? template.render({ content: html, ...parsedYaml, static: _static }) : html
       fs.writeFileSync(out, rendered)
       break
     }
