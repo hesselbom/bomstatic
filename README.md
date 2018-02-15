@@ -9,7 +9,7 @@ Run `bomstatic` to convert this directory structure:
 .
 ├── content
 |   ├── favicon.ico
-|   └── index.pug
+|   └── index.md
 ├── template
 |   ├── index.pug
 |   └── index.sass
@@ -24,7 +24,7 @@ Into this:
 |   └── index.css
 ├── content
 |   ├── favicon.ico
-|   └── index.pug
+|   └── index.md
 ├── template
 |   ├── index.pug
 |   └── index.sass
